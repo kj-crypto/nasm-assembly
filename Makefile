@@ -21,11 +21,11 @@ debug:
 
 $(obj_dir)/%.o: $(src_dir)/%.asm
 	@mkdir -p $(dir $@)
-	@$(NASM) $(NASM_OPTIONS) -o $@ $^
+	$(NASM) $(NASM_OPTIONS) -o $@ $^
 
 
 $(targets): %: %.o
-	@$(LD) $(LD_OPTIONS) -o $@ $^
+	$(LD) $(LD_OPTIONS) -o $@ $^
 
 
 .PHONY: all
