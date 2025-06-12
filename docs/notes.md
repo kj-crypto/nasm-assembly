@@ -14,6 +14,7 @@
   - AX - half of 32 bit
   - AH - 8-bit high
   - AL - 8-bit low
+ - `A` register, works as an accumulator like in `mul` operation
 
 ### BSS - block started by symbol
 - keeps uninitialized global and static variables
