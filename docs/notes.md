@@ -14,3 +14,7 @@
   - AX - half of 32 bit
   - AH - 8-bit high
   - AL - 8-bit low
+
+### BSS - block started by symbol
+- keeps uninitialized global and static variables
+
