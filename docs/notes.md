@@ -27,4 +27,5 @@
 - `AF` - auxiliary carry flag, indicates borrow from bit 3 to bit 4,
          its half carry flag
 - `ZF` - zero flag, set if register from operation is set to 0
+- `SF` - sign flag, 1 - negative, 0 - positive
 
