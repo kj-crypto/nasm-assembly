@@ -1,8 +1,10 @@
 NASM := nasm
-NASM_OPTIONS := -f elf
+NASM_OPTIONS := -f elf32
 
 LD := ld
 LD_OPTIONS := -m elf_i386
+# libc linking options
+LD_OPTIONS += -dynamic-linker /lib/ld-linux.so.2 -L/lib/i386-linux-gnu/
 
 src_dir = src
 obj_dir = build
@@ -25,7 +27,7 @@ $(obj_dir)/%.o: $(src_dir)/%.asm
 
 
 $(targets): %: %.o
-	$(LD) $(LD_OPTIONS) -o $@ $^
+	$(LD) $(LD_OPTIONS) -o $@ -lc $^
 
 
 .PHONY: all
