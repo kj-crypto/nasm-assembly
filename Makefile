@@ -1,5 +1,5 @@
 NASM := nasm
-NASM_OPTIONS := -f elf32
+NASM_OPTIONS := -f elf32 -g -F dwarf
 
 LD := ld
 LD_OPTIONS := -m elf_i386
