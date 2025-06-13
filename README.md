@@ -3,8 +3,12 @@ This is nasm assembly simple programs.
 It serves as a knowledge base
 
 ### Setup
- - set `gdb` by `echo "set disassembly-flavor intel" > ~/.gdbinit`
- - setup 32-bit libc on 64-bit machine by
+#### GDB
+```
+echo "set disassembly-flavor intel" >> ~/.gdbinit
+```
+
+#### 32-bit libc
 ```
 sudo dpkg --add-architecture i386
 sudo apt update
