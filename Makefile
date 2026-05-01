@@ -4,7 +4,8 @@ NASM_OPTIONS := -f elf32 -g -F dwarf
 LD := ld
 LD_OPTIONS := -m elf_i386
 # libc linking options
-LD_OPTIONS += -dynamic-linker /lib/ld-linux.so.2 -L/lib/i386-linux-gnu/
+# LD_OPTIONS += -dynamic-linker /lib/ld-linux.so.2 -L/lib/i386-linux-gnu/
+LD_OPTIONS += -dynamic-linker $(PWD)/glibc-i386/lib/ld-linux.so.2 -L$(PWD)/glibc-i386/lib
 
 src_dir = src
 obj_dir = build

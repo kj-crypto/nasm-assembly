@@ -20,6 +20,8 @@ sudo apt install libc6:i386
 sudo ln -s /lib/i386-linux-gnu/libc.so.6 /lib/i386-linux-gnu/libc.so
 ```
 
+Or compile from sources using `bash glibc-compile.sh`
+
 #### PWNDBG
 
 ```
